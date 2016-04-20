@@ -1,3 +1,7 @@
+<?php
+	require('info.php');
+?>
+
 <html>
 	<head>
 		<title>Welcome!</title>
@@ -23,9 +27,9 @@
 	</head>
 	<body>
 		<div class="login">
-			<form action="home.php" method="post">
+			<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
 				<label>Name:</label>
-				<span class="error">*</span>
+				<span class="error">* <?php echo $nameerror; ?></span>
 				<br>
 				<input type="text" name="username" placeholder="Name"><br>
 				<input type="submit" name="submit">

@@ -1,12 +1,12 @@
 <?php
-
+$currentPage = "home";
 require('info.php');
 require('head.php');
 
 ?>
 
 <div class="container main-content">
-    <h1>Welcome <?php echo $username ?></h1>
+    <h1>Welcome <?php echo $_SESSION["username"]; ?></h1>
     <p>This is the preview of the main website for 
     Pagination Developers: a nation of programmers and entrepenaurs!
     Here, you can market your products and programs, and you can
@@ -23,7 +23,7 @@ require('head.php');
     and they are the managers and team members of the behind the 
     scenes for Pagination. If you'd like to contribute to this 
     website, the community, and help build it up, contact me at
-    [<a style="color: red; text-decoration: none;" href="mailto:alcouch65@gmail.com?Subject=Community%20Join" target="_blank">alcouch65@gmail.com</a>]
+    [<a href="mailto:alcouch65@gmail.com?Subject=Community%20Join" target="_blank">alcouch65@gmail.com</a>]
     <br><br>
     <span style="color: yellow">If the email link does not work 
     for you, just copy and paste the email and paste it into your

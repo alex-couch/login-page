@@ -1,10 +1,12 @@
 <?php
-    
-    $username = "";
+    session_start();
+    $nameerror = "";
     if($_SERVER["REQUEST_METHOD"] == "POST"){
         if(isset($_POST["username"]) && !empty($_POST["username"])){
-            $username = getData($_POST["username"]);
-            $username = ucwords($username);
+            $_SESSION["username"] = getData(ucwords($_POST["username"]));
+            header('Location: home.php');
+        }else{
+            $nameerror = "Please enter a name";
         }
     }
     
